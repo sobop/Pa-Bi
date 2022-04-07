@@ -6,6 +6,7 @@ export default function Header() {
         <ul className="menu">
           <li>메뉴1</li>
           <li>메뉴2</li>
+          <li>로그인</li>
         </ul>
       </div>
     </header>

@@ -1,18 +1,15 @@
-import Header from "./components/Header";
-import Banner from "./components/Banner";
-import Prototypes from "./components/Prototypes";
-import Footer from "./components/Footer";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Home from "./components/pages/Home/Home";
+import Login from "./components/pages/Login/Login";
 
 function App() {
   return (
-    <>
-      <Header />
-      <div className="container">
-        <Banner />
-        <Prototypes />
-        <Footer />
-      </div>
-    </>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/login" component={Login} />
+        <Route path="/" exact component={Home} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 

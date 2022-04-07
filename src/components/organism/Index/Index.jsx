@@ -1,4 +1,4 @@
-export default function Prototypes() {
+export default function Index() {
   return (
     <div className="inner">
       <div className="todayFlower">"오늘의 꽃은 해바라기입니다."</div>
