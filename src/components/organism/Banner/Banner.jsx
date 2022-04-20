@@ -1,3 +1,5 @@
+import { Ho } from "./Banner.style";
+
 export default function Banner() {
-  return <div className="banner">banner</div>;
+  return <Ho></Ho>;
 }
