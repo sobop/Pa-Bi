@@ -128,6 +128,7 @@ table {
 /* reset end */
 * {
   font-family: "Nanum Gothic", sans-serif;
+  text-decoration: none;
 }
 .bar {
   width: 440px;
@@ -135,7 +136,4 @@ table {
   align-content: center;
   border: 1px Solid #b1b1b1;
   border-radius: 3px;
-}
-
-.react-icons {
 }
