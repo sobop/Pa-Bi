@@ -6,9 +6,10 @@ import {
   Name,
   IconList,
   MenuList,
-  Search,
   SubHeader,
   Wrap,
+  Category,
+  Search,
 } from "./Header.style";
 import { ReactComponent as Pabi } from "./Pa-Bi.svg";
 import { ReactComponent as Icon } from "./logo.svg";
@@ -19,85 +20,75 @@ import {
   BiHeart,
   BiCog,
   BiMenu,
+  BiChevronDown,
 } from "react-icons/bi";
-
+import MenuListData from "./MenuListData";
 export default function Header() {
   return (
     <Wrap>
       <MainHeader>
+        <Logo>
+          <Link to="/">
+            <Icon />
+          </Link>
+        </Logo>
+        <Name>
+          <Link>
+            <Pabi />
+          </Link>
+        </Name>
+        <Search>
+          <input
+            className="bar"
+            type={"text"}
+            placeholder="동네 이름, 물품명 등을 검색하세요."
+          ></input>
+        </Search>
         <Menu>
-          <Logo>
-            <Link to="/">
-              <Icon />
-            </Link>
-          </Logo>
-          <Name>
-            <Link>
-              <Pabi />
-            </Link>
-          </Name>
-          <Search>
-            <input
-              className="bar"
-              type={"text"}
-              placeholder="동네이름, 물품명 등을 검색해보세요!"
-            ></input>
-          </Search>
           <IconList>
             <Link to="mypage">
-              <BiUser size={"40px"} />
+              <BiUser />
             </Link>
           </IconList>
           <IconList>
-            <Link>
-              <BiShoppingBag size={"40px"} />
+            <Link to="/">
+              <BiShoppingBag />
             </Link>
           </IconList>
           <IconList>
-            <Link>
-              <BiPencil size={"40px"} />
+            <Link to="/">
+              <BiPencil />
             </Link>
           </IconList>
           <IconList>
-            <BiHeart size={"40px"} color={"red"} />
+            <Link to="/">
+              <BiHeart color={"red"} />
+            </Link>
           </IconList>
           <IconList>
-            <BiCog size={"40px"} />
+            <Link to="/">
+              <BiCog />
+            </Link>
           </IconList>
         </Menu>
       </MainHeader>
       <SubHeader>
-        <Menu>
-          <MenuList>
-            <BiMenu size={"30px"} />
-          </MenuList>
-          <MenuList>카테고리</MenuList>
-          <MenuList>
-            <Link to="/">인기매물</Link>
-          </MenuList>
-          <MenuList>
-            <Link to="/">임박매물</Link>
-          </MenuList>
-          <MenuList>
-            <Link to="/">팝니다</Link>
-          </MenuList>
-          <MenuList>
-            <Link to="/">이벤트</Link>
-          </MenuList>
-          <MenuList>
-            <Link to="/">경매종료상품</Link>
-          </MenuList>
-          <MenuList>
-            <Link to="/login">로그인</Link>
-          </MenuList>
-          <MenuList>
-            <Link to="/register">회원가입</Link>
-          </MenuList>
-          <MenuList>
-            <Link to="/login">고객센터</Link>
-          </MenuList>
-        </Menu>
+        <Category>
+          <BiMenu />
+          카테고리
+          <BiChevronDown />
+        </Category>
+        <MenuData />
       </SubHeader>
     </Wrap>
   );
 }
+
+const MenuData = () => {
+  const menuList = MenuListData.map((props) => (
+    <MenuList>
+      <Link to={props.link}>{props.name}</Link>
+    </MenuList>
+  ));
+  return <Menu>{menuList}</Menu>;
+};

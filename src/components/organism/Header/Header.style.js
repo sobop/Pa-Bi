@@ -22,14 +22,15 @@ export const Search = styled.div`
   width: 460px;
   height: 44px;
   margin-right: 250px;
-  font-size: 30px;
+  position: relative;
+  input svg {
+    position: absolute;
+  }
 `;
 export const Menu = styled.ul`
   display: flex;
-  height: 56px;
+
   font-size: 15px;
-  align-items: center;
-  justify-content: center;
 `;
 export const Logo = styled.div`
   margin-right: 20px;
@@ -41,6 +42,10 @@ export const IconList = styled.li`
   margin-left: 30px;
   align-items: center;
   justify-content: center;
+  a svg {
+    height: 40px;
+    width: 40px;
+  }
   a {
     text-decoration: none;
     color: black;
@@ -62,14 +67,37 @@ export const IconList = styled.li`
 
 export const SubHeader = styled.div`
   position: fixed;
+  display: flex;
   top: 90px;
   background-color: #fff;
   width: 100%;
   height: 56px;
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 12%);
+  justify-content: center;
+  align-items: center;
+`;
+export const Category = styled.div`
+  display: flex;
+  align-items: center;
+  svg: first-child {
+    height: 25px;
+    width: 25px;
+    margin-right: 8px;
+  }
+  svg: last-child {
+    height: 20px;
+    width: 20px;
+  }
 `;
 export const MenuList = styled.li`
-  margin-left: 30px;
+  margin-left: 20px;
+  &:first-child {
+    margin-left: 100px;
+    font-weight: bold;
+  }
+  &:nth-child(6) {
+    margin-left: 480px;
+  }
   a {
     text-decoration: none;
     color: black;
