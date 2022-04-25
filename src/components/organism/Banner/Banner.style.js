@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Ho = styled.div`
-  display: none;
   width: 100%;
   height: 300px;
-  margin-top: 200px;
-  background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/04/47/28/85585898aa98a14.jpg);
+  background-image: url(http://www.easynlight.com/wp-content/uploads/2018/09/gs%EC%9D%B8%EC%A6%9D%EB%A1%9C%EA%B3%A0.png);
+  background-size: contain;
+  display: none;
 `;

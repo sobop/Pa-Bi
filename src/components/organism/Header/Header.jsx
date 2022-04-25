@@ -11,8 +11,8 @@ import {
   Category,
   Search,
 } from "./Header.style";
-import { ReactComponent as Pabi } from "./Pa-Bi.svg";
-import { ReactComponent as Icon } from "./logo.svg";
+import { ReactComponent as Pabi } from "./글씨만.svg";
+import { ReactComponent as Icon } from "./로고만.svg";
 import {
   BiUser,
   BiShoppingBag,
@@ -33,7 +33,7 @@ export default function Header() {
           </Link>
         </Logo>
         <Name>
-          <Link>
+          <Link to="/">
             <Pabi />
           </Link>
         </Name>
